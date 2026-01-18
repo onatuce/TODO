@@ -26,3 +26,18 @@
   outline: none;
   border-radius: 5px;
 }
+.todo-button{
+  width: 100px;
+  height: 35px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #b9b300;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+.todo-icons{
+  font-size: 20px;
+  margin-right: 5px;
+}
