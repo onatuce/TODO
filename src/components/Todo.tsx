@@ -27,7 +27,7 @@ function Todo({ todo, onRemoveTodo ,onUpdateTodo}: any) {
 
   return (
 
-    <div style={{display:'flex', flexDirection:'row',alignItems:'center',justifyContent:'space-between', gap:'10px', border:'1px solid black', margin:'10px', padding:'10px'}}>
+    <div style={{display:'flex', flexDirection:'row',alignItems:'center',justifyContent:'space-between', gap:'10px', border:'1px solid #c4b7b7', margin:'10px', padding:'10px'}}>
         <div>{
             editable ? <input className="todo-input" value={newTodo} onChange={(e) => setNewTodo(e.target.value)} type="text" defaultValue={content} /> : content
         }
