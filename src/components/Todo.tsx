@@ -2,17 +2,12 @@ import { useState } from 'react';
 import { FaCheck } from "react-icons/fa";
 import { IoIosRemoveCircle } from "react-icons/io";
 import { MdEditSquare } from "react-icons/md";
-
 import '../App.css';
 
-
 function Todo({ todo, onRemoveTodo ,onUpdateTodo}: any) {
-
     const{ content, id  } = todo;
-
     const[editable, setEditable] = useState(false);
     const[newTodo, setNewTodo] = useState(content);
-
     const updateTodo=() =>{
         const request = { id: id,
             content: newTodo
@@ -24,8 +19,8 @@ function Todo({ todo, onRemoveTodo ,onUpdateTodo}: any) {
     const removeTodo=() =>{
         onRemoveTodo(id);
     }
+return (
 
-  return (
 
     <div style={{display:'flex', flexDirection:'row',alignItems:'center',justifyContent:'space-between', gap:'10px', border:'1px solid #c4b7b7', margin:'10px', padding:'10px'}}>
         <div>{
@@ -39,7 +34,7 @@ function Todo({ todo, onRemoveTodo ,onUpdateTodo}: any) {
             
         </div>
     </div>
-  )
+)
 }
 
 export default Todo;

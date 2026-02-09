@@ -10,7 +10,6 @@ function TodoList({ todos ,onRemoveTodo,onUpdateTodo}: any) {
         {
             todos&&todos.map((todo: any)=>(
                 <Todo todo={todo} key={todo.id} onRemoveTodo={onRemoveTodo} onUpdateTodo={onUpdateTodo}/>
-
             ))
         }
     </div>

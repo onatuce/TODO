@@ -5,13 +5,12 @@ import TodoList from './components/TodoList';
 
 
 function App() {
-
   const [todos,setTodos]=useState([]);
-
+// Create a new todo item
   const createTodo=(newTodo)=>{
     setTodos([...todos,newTodo]);
   }
-
+// Remove a todo item
   const removeTodo=(id)=>{
     setTodos(todos.filter(todo => todo.id !== id));
   }
@@ -20,7 +19,9 @@ function App() {
     alert('🏆Congratulations!🏆 You have 10 todos! 🏆and you found the secret message!🏆');
   }
 }, [todos.length]);
-  const updateTodo=(newTodo)=>{
+
+// Update a todo item  
+const updateTodo=(newTodo)=>{
     const updateTodos=todos.map((todo)=>{
            if (todo.id!==newTodo.id){
         return todo;
