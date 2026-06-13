@@ -1,16 +1,62 @@
-# React + Vite
+# Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dette er en enkel todo-app laget med React og Vite.
 
-Currently, two official plugins are available:
+Du kan:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- legge til nye oppgaver
+- endre en oppgave
+- slette én oppgave
+- slette alle oppgaver
+- se hvor mange oppgaver som ligger i lista
 
-## React Compiler
+Easter egg = Det er også lagt inn en liten ekstra ting: når du har 10 oppgaver, kommer det en melding på skjermen.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Hva appen gjør
 
-## Expanding the ESLint configuration
+- Du skriver inn en oppgave i feltet og trykker Add.
+- Oppgaven legges til i lista.
+- Du kan trykke på edit-ikonet for å endre teksten.
+- Du kan trykke på delete-ikonet for å fjerne en oppgave.
+- Du kan trykke på Slette alle for å tøme hele lista.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Prosjektfiler
+
+- [src/App.jsx](src/App.jsx) - hovedlogikken for todo-lista
+- [src/components/TodoCreate.jsx](src/components/TodoCreate.jsx) - skjemaet for å legge til nye oppgaver
+- [src/components/TodoList.tsx](src/components/TodoList.tsx) - viser alle oppgavene
+- [src/components/Todo.tsx](src/components/Todo.tsx) - én enkelt todo med redigering og sletting
+
+## Tech brukt
+
+- React
+- Vite
+- JavaScript
+- TypeScript i noen komponentfiler
+- react-icons
+
+## How to run
+
+Installer pakkene:
+
+```bash
+npm install
+```
+
+Start appen:
+
+```bash
+npm run dev
+```
+
+Bygg prosjektet:
+
+```bash
+npm run build
+```
+
+## Notater
+
+- Appen er holdt enkel med vilje.
+- Lista lagres bare i minnet, så den nullstilles når du refresher siden.
+- Koden er lett å bygge videre på hvis du vil legge til lagring, filter eller fullført status.
